@@ -3,26 +3,957 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="一般貨物自動車運送事業 諸手続きサポートページ（準備中）">
+    <meta name="description" content="トラック運送事業の諸手続きを専門サポート。営業所・車庫の変更、増車・減車届出、役員変更、運行管理者選任、報告書作成など、運輸局への各種届出を迅速・確実に代行いたします。">
+    <meta name="keywords" content="一般貨物自動車運送事業,トラック運送業,諸手続き,変更届出,認可申請,運輸局,増車,減車,営業所変更,車庫変更,役員変更,運行管理者,行政書士">
     <meta name="robots" content="noindex, nofollow">
-    <title>一般貨物自動車運送事業 諸手続きサポート</title>
+    <meta property="og:title" content="一般貨物自動車運送事業 諸手続きサポート｜変更届出・報告書作成代行">
+    <meta property="og:description" content="トラック運送事業の諸手続きを専門サポート。営業所・車庫の変更、増車・減車届出、役員変更、運行管理者選任、報告書作成など、運輸局への各種届出を迅速・確実に代行いたします。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://motortruck-procedures.transportlegaladmin.jp">
+    <title>一般貨物自動車運送事業 諸手続きサポート｜変更届出・報告書作成代行</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo/favicon-32.png">
 
     <!-- Tailwind CSS v4.1 -->
     <script src="https://cdn.tailwindcss.com?v=4.1"></script>
 
+    <!-- Animate.css v4.1.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS v2.3 -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons v0.536.0 -->
+    <script src="https://unpkg.com/lucide@0.536.0"></script>
+
     <!-- Google Fonts - Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        // motortruck-new / motortruck-renewal と同一の深緑系カラーパレット
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        secondary: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; }
+        /* カスタムスタイル */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        /* ナビゲーションのスティッキー＆透明化 */
+        nav.nav-transparent {
+            background-color: transparent;
+        }
+
+        nav.nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero テキストの影 */
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* モバイルメニュー */
+        .mobile-menu-hidden {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu-visible {
+            max-height: 800px;
+            transition: max-height 0.3s ease-in;
+        }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gray-50 text-gray-800">
-    <main class="text-center px-6">
-        <h1 class="text-2xl md:text-3xl font-bold mb-4">一般貨物自動車運送事業 諸手続きサポート</h1>
-        <p class="text-gray-500">コンテンツ準備中</p>
-    </main>
+<body class="bg-gray-50">
+
+    <!-- ナビゲーション -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 nav-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- ロゴ -->
+                <a href="#hero" class="flex items-center">
+                    <!-- モバイル用（小） -->
+                    <img src="/assets/images/logo/favicon-32.png"
+                         alt="logo-mobile"
+                         class="h-8 md:hidden"
+                         loading="eager"
+                         decoding="async">
+                    <!-- タブレット用（中） -->
+                    <img src="/assets/images/logo/apple-touch-icon.png"
+                         alt="logo-tablet"
+                         class="hidden md:block lg:hidden h-10"
+                         loading="eager"
+                         decoding="async">
+                    <!-- デスクトップ用（大） -->
+                    <img src="/assets/images/logo/truck.png"
+                         alt="logo-desktop"
+                         class="hidden lg:block h-12"
+                         loading="eager"
+                         decoding="async">
+                    <span class="text-lg md:text-xl font-bold text-white ml-2 hidden xl:inline" id="nav-logo-text">motortruck-procedures</span>
+                </a>
+
+                <!-- デスクトップメニュー -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-white hover:text-gray-200 font-medium transition" id="nav-link-1">ホーム</a>
+                    <a href="#about" class="text-white hover:text-gray-200 font-medium transition" id="nav-link-2">諸手続きとは</a>
+                    <a href="#services" class="text-white hover:text-gray-200 font-medium transition" id="nav-link-3">サービス内容</a>
+                    <a href="#flow" class="text-white hover:text-gray-200 font-medium transition" id="nav-link-4">ご利用の流れ</a>
+                    <a href="https://contact.transportlegaladmin.jp/" target="_blank" rel="noopener noreferrer" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors" id="nav-cta">お問い合わせ</a>
+                </div>
+
+                <!-- モバイルメニューボタン -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#hero" class="block text-gray-700 hover:text-primary-600 font-medium">ホーム</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary-600 font-medium">諸手続きとは</a>
+                <a href="#services" class="block text-gray-700 hover:text-primary-600 font-medium">サービス内容</a>
+                <a href="#flow" class="block text-gray-700 hover:text-primary-600 font-medium">ご利用の流れ</a>
+                <a href="https://contact.transportlegaladmin.jp/" target="_blank" rel="noopener noreferrer" class="block bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors">お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero セクション -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- 背景画像 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&w=1600&q=80&fm=webp&fit=crop"
+                 alt="高速道路を走行するトラック"
+                 class="w-full h-full object-cover"
+                 loading="eager"
+                 decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+        </div>
+
+        <!-- コンテンツ -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 hero-text-shadow animate__animated animate__fadeInUp">
+                一般貨物自動車運送事業<br>諸手続き専門サポート
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 hero-text-shadow animate__animated animate__fadeInUp animate__delay-1s">
+                営業所・車庫の変更、増車・減車、役員変更、報告書作成など<br class="hidden md:block">
+                許可取得後に発生する各種手続きを迅速・確実にサポート
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#services" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-700 transition shadow-xl">
+                    サービス内容を見る
+                </a>
+                <a href="https://contact.transportlegaladmin.jp/" target="_blank" rel="noopener noreferrer" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+                    お問い合わせ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 諸手続きとは セクション -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">一般貨物自動車運送事業の諸手続きとは</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    トラック運送事業を運営する中で、営業所の移転・新設、車両の増減、役員の変更、運行管理者の選任など、<br class="hidden md:block">
+                    さまざまな変更が発生します。これらの変更には運輸局への届出または認可申請が必要となり、<br class="hidden md:block">
+                    期限内に正確な書類を提出することが求められます。<br><br>
+                    当事務所では、これら日常的に発生する諸手続きをワンストップでサポート。<br class="hidden md:block">
+                    面倒な書類作成から申請代行まで、お客様の負担を軽減し、確実なコンプライアンスを実現します。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">確実な手続き</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        運送事業専門の行政書士が、法令に基づいた正確な書類作成と申請を行います。
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-secondary-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-secondary-200 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="clock" class="w-8 h-8 text-secondary-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">迅速な対応</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        期限のある届出もお任せください。スピーディーな対応で、期限遵守をサポートします。
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="message-circle-heart" class="w-8 h-8 text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">丁寧なサポート</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        手続きの進捗状況を随時ご報告。不明点にも丁寧にお答えし、安心してお任せいただけます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービス内容 セクション -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">取り扱い諸手続き一覧</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    一般貨物自動車運送事業の運営に必要な各種手続きを総合的にサポートいたします
+                </p>
+            </div>
+
+            <!-- カード1：増車・減車（事前届出／条件次第で認可申請） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="p-8 md:p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="truck" class="w-7 h-7 text-primary-600"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">増車・減車</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                保有車両を増やす・減らす場合は、運輸支局への事前届出が必要です。一定規模以上の増車の場合は届出ではなく認可申請となります。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">増車届出</h4>
+                                        <p class="text-sm text-gray-600">新車導入・中古車購入に伴う事前届出（実施予定日の5〜10日前）</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">減車届出</h4>
+                                        <p class="text-sm text-gray-600">車両廃車・売却に伴う事前届出（実施予定日の5〜10日前）</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">大規模増車の認可申請</h4>
+                                        <p class="text-sm text-gray-600">前3か月比30%以上かつ11両以上となる増車は認可申請が必要</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1562811950-41d4a4944a4b?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="駐車場に並ぶトラック"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード2：営業所の新設・移転・廃止（認可申請） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="h-64 md:h-auto order-2 md:order-1">
+                            <img src="https://images.unsplash.com/photo-1600531529272-023c4b821f14?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="営業所ビル"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <div class="p-8 md:p-12 order-1 md:order-2">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-secondary-200 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="building-2" class="w-7 h-7 text-secondary-700"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">営業所の新設・移転・廃止</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                営業所の新設・移転・廃止は事業計画変更認可申請が必要です。認可後でなければ変更後の状態で事業を行うことができません。審査期間（目安1〜3か月）を考慮した早めの申請が重要です。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">営業所の新設</h4>
+                                        <p class="text-sm text-gray-600">新営業所設置の認可申請</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">営業所の移転</h4>
+                                        <p class="text-sm text-gray-600">所在地変更の認可申請（最小行政区域内の変更は事後届出）</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">営業所の廃止</h4>
+                                        <p class="text-sm text-gray-600">廃止に伴う認可申請</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード3：車庫の新設・移転・廃止（認可申請） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="p-8 md:p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="warehouse" class="w-7 h-7 text-primary-600"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">車庫の新設・移転・廃止</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                車庫の新設・移転・廃止も事業計画変更認可申請が必要です。営業所との距離要件など法定要件への適合確認を含めてサポートします。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">車庫の新設</h4>
+                                        <p class="text-sm text-gray-600">新規車庫設置の認可申請</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">車庫の移転</h4>
+                                        <p class="text-sm text-gray-600">車庫所在地変更の認可申請</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">車庫の廃止</h4>
+                                        <p class="text-sm text-gray-600">車庫廃止に伴う届出手続き</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1720811559371-7b0ebd219127?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="トラック車庫"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード4：運行管理者・整備管理者の選任・解任（事後届出） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="h-64 md:h-auto order-2 md:order-1">
+                            <img src="https://images.unsplash.com/photo-1613758465361-f405e25854cf?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="安全確認を行う担当者"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <div class="p-8 md:p-12 order-1 md:order-2">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-secondary-200 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="user-cog" class="w-7 h-7 text-secondary-700"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">運行管理者・整備管理者の選任・解任</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                運行管理者・整備管理者に変更があった場合は、遅滞なく運輸支局への届出が必要です。欠員状態は法令違反となるため、後任の確保と届出を速やかに行う必要があります。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">運行管理者の選任届出</h4>
+                                        <p class="text-sm text-gray-600">根拠：貨物自動車運送事業輸送安全規則第19条</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">運行管理者の解任届出</h4>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">整備管理者の選任届出</h4>
+                                        <p class="text-sm text-gray-600">根拠：道路運送車両法第52条</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">整備管理者の解任届出</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード5：役員・名称・住所の変更（事後届出） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="p-8 md:p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="users" class="w-7 h-7 text-primary-600"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">役員・名称・住所の変更</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                役員の就任・退任、会社名・住所の変更は、変更後遅滞なく届出が必要です。代表権を有する役員の変更は特に速やかな対応が求められます。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">役員の就任・退任届出</h4>
+                                        <p class="text-sm text-gray-600">代表権者：変更後遅滞なく。その他役員：毎年7月31日までに前年7月1日〜6月30日分を一括</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">商号・名称の変更届出</h4>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">主たる事務所の住所変更届出</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1758518730384-be3d205838e8?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="役員変更に関する打ち合わせ"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード6：貨物自動車利用運送の開始（認可申請） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="h-64 md:h-auto order-2 md:order-1">
+                            <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="運送ネットワーク"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <div class="p-8 md:p-12 order-1 md:order-2">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-secondary-200 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="network" class="w-7 h-7 text-secondary-700"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">貨物自動車利用運送の開始</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                自社トラックによる運送に加えて他の運送事業者を利用して貨物を運送する場合は、事業計画変更認可申請が必要です。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">利用運送開始の認可申請</h4>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-secondary-700 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">利用運送に係る営業所・業務範囲の変更</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード7：運賃料金の変更（届出） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="p-8 md:p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="receipt" class="w-7 h-7 text-primary-600"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">運賃料金の変更</h3>
+                            </div>
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                運賃料金を変更する場合は、運輸支局への届出が必要です。標準的な運賃の告示に基づいた運賃設定もサポートします。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">運賃料金設定（変更）届出書の作成・提出代行</h4>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="check" class="w-5 h-5 text-primary-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">標準的な運賃の告示に基づく運賃設定のサポート</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-auto">
+                            <img src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?w=1200&q=80&fm=webp&fit=crop"
+                                 alt="運賃料金関連の書類"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード8：定期報告書の作成（報告） -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden p-8 md:p-12">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="file-text" class="w-7 h-7 text-primary-600"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900">定期報告書の作成</h3>
+                    </div>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        運輸局への定期報告書の作成を代行いたします。正確なデータ集計と法令に基づいた報告書作成をサポートします。
+                    </p>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-900 mb-2">事業報告書</h4>
+                            <p class="text-sm text-gray-600">毎事業年度経過後100日以内に提出</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-900 mb-2">事業実績報告書</h4>
+                            <p class="text-sm text-gray-600">毎年7月10日まで（前年4月〜当年3月分）に提出</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-900 mb-2">運賃料金届出</h4>
+                            <p class="text-sm text-gray-600">運賃変更時の届出書作成</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-900 mb-2">監査対策</h4>
+                            <p class="text-sm text-gray-600">監査に備えた書類整備支援</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- カード9：事業の休止・廃止・その他の届出 -->
+            <div data-aos="fade-up">
+                <div class="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl shadow-xl p-8 md:p-12 text-white">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i data-lucide="file-x" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold">事業の休止・廃止・その他の届出</h3>
+                    </div>
+                    <p class="text-primary-50 mb-8 leading-relaxed">
+                        上記以外にも、一般貨物自動車運送事業に関する各種届出や相談に対応いたします。
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                            <h4 class="font-bold mb-2">事業の休止</h4>
+                            <p class="text-sm text-primary-50">休止日から30日以内に届出が必要</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                            <h4 class="font-bold mb-2">事業の廃止</h4>
+                            <p class="text-sm text-primary-50">廃止日から30日以内に届出が必要</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                            <h4 class="font-bold mb-2">その他の相談</h4>
+                            <p class="text-sm text-primary-50">上記以外の届出・手続きについてもお気軽にご相談ください</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ご利用の流れ セクション -->
+    <section id="flow" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">ご利用の流れ</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    お問い合わせから手続き完了までの流れをご説明します
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <!-- ステップ1 -->
+                    <div class="flex items-start" data-aos="fade-right">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
+                            1
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">お問い合わせ</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                お問い合わせフォームまたはお電話にて、必要な手続きについてご相談ください。初回相談は無料です（お電話または対面で1時間以内・要予約）。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ステップ2 -->
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
+                            2
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ヒアリング・お見積り</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                手続き内容を詳しくお伺いし、必要な書類や期限を確認。作業内容と費用のお見積りをご提示いたします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ステップ3 -->
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="200">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
+                            3
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ご契約・書類準備</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                お見積り内容にご納得いただけましたらご契約。必要な書類をご準備いただき、当事務所にて申請書類を作成いたします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ステップ4 -->
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="300">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
+                            4
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">運輸局へ申請</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                作成した書類を運輸局へ提出。進捗状況は随時ご報告いたします。必要に応じて補正対応も行います。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ステップ5 -->
+                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="400">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
+                            5
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">手続き完了</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                受理証明書や副本などの交付を受け、お客様へご報告。手続き完了後のフォローもお任せください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="https://contact.transportlegaladmin.jp/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-primary-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-700 transition shadow-xl">
+                    お問い合わせはこちら
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 セクション -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">よくある質問</h2>
+                <p class="text-lg text-gray-600">
+                    一般貨物自動車運送事業の諸手続きに関するよくある質問をまとめました
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Q. 手続きの期限はありますか？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A. 手続きの種類により異なります。増車・減車は実施予定日の5〜10日前までの事前届出が必要です。役員変更や運行管理者の選任・解任は変更後遅滞なく届出が必要です。営業所・車庫の変更は事前に認可を受ける必要があり、審査期間（目安1〜3か月）を考慮した早めの申請が重要です。期限を過ぎると行政処分の対象となる場合がありますので、お早めにご相談ください。
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Q. 費用はどのくらいかかりますか？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A. 手続きの種類や複雑さによって異なります。まずは無料相談にて詳細をお伺いし、お見積りをご提示いたします。明瞭な料金体系を心がけておりますので、ご安心ください。
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Q. 急ぎの手続きにも対応できますか？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A. はい、可能な限り対応いたします。期限が迫っている場合や緊急の届出が必要な場合は、その旨お伝えください。優先的に対応させていただきます。
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Q. 遠方からでも依頼できますか？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A. はい、全国対応可能です。メールやオンラインミーティングでのやり取りも可能ですので、お気軽にご相談ください。書類のやり取りは郵送やメールで行えます。
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Q. 継続的にサポートを依頼できますか？</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        A. はい、顧問契約も承っております。定期的な報告書作成や、発生する変更届出を継続的にサポートいたします。詳しくは<a href="https://continuouscounsel.transportlegaladmin.jp" class="text-primary-600 hover:underline">継続的サポートページ</a>をご覧ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-green-700 to-green-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <div class="mb-8">
+                    <i data-lucide="mail" class="w-20 h-20 mx-auto mb-6 text-white opacity-90"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">お問い合わせ</h2>
+                    <p class="text-lg md:text-xl text-green-50 max-w-3xl mx-auto mb-8 leading-relaxed">
+                        一般貨物自動車運送事業に関するご相談は、まずはお気軽にお問い合わせください。<br>
+                        初回相談は無料で承っております。（お電話または対面で1時間以内。要予約）
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-2xl p-10" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://contact.transportlegaladmin.jp/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                        <i data-lucide="external-link" class="w-5 h-5 mr-2"></i>
+                        お問い合わせフォームを開く
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">
+                        ※ 別ウィンドウで開きます
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- ロゴ・会社情報 -->
+                <div class="md:col-span-2">
+                    <a href="https://transportlegaladmin.jp" class="flex items-center mb-4 hover:opacity-80 transition-opacity">
+                        <img src="/assets/images/logo/tla.png" alt="transportlegaladmin.jp ロゴ" class="h-10 mr-2" loading="lazy" decoding="async">
+                        <span class="text-xl font-bold">transportlegaladmin.jp</span>
+                    </a>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        自動車運送事業の法務に特化した行政書士事務所として、
+                        お客様の事業発展を法的側面から支援いたします。
+                    </p>
+                </div>
+
+                <!-- サービスリンク -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">取り扱い業務</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="https://motortruck-new.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">トラック貨物事業（新規）</a></li>
+                        <li><a href="https://motortruck-renewal.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">トラック貨物事業（更新）</a></li>
+                        <li><a href="https://charteredbus-new.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">貸切バス新規許可</a></li>
+                        <li><a href="https://charteredbus-renewal.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">貸切バス更新</a></li>
+                        <li><a href="https://charteredbus-procedures.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">貸切バス諸手続き</a></li>
+                        <li><a href="https://urbanhirecar.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">都市型ハイヤー事業</a></li>
+                        <li><a href="https://specific-passenger.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">特定旅客事業</a></li>
+                        <li><a href="https://mixed-cargo-and-passenger.transportlegaladmin.jp/" class="hover:text-primary-400 transition-colors">貨客限定</a></li>
+                    </ul>
+                </div>
+
+                <!-- サポートリンク -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サポート</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="https://continuouscounsel.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">継続的サポート</a></li>
+                        <li><a href="https://knowledge.transportlegaladmin.jp" class="hover:text-primary-400 transition-colors">ナレッジ&トピックス</a></li>
+                        <li><a href="https://privacy-policy.transportlegaladmin.jp" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">プライバシーポリシー</a></li>
+                        <li><a href="https://terms-of-service.transportlegaladmin.jp" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- コピーライト -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 transportlegaladmin.jp All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Main Script -->
+    <script>
+        // ナビゲーションのスクロール対応
+        const navbar = document.getElementById('navbar');
+        const navLogoText = document.getElementById('nav-logo-text');
+        const navLinks = document.querySelectorAll('#navbar a:not(#nav-cta)');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('nav-transparent');
+                navbar.classList.add('nav-scrolled');
+                if (navLogoText) {
+                    navLogoText.classList.remove('text-white');
+                    navLogoText.classList.add('text-gray-900');
+                }
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'hover:text-gray-200');
+                    link.classList.add('text-gray-700', 'hover:text-primary-600');
+                });
+                document.getElementById('mobile-menu-btn').classList.remove('text-white');
+                document.getElementById('mobile-menu-btn').classList.add('text-gray-900');
+            } else {
+                navbar.classList.add('nav-transparent');
+                navbar.classList.remove('nav-scrolled');
+                if (navLogoText) {
+                    navLogoText.classList.add('text-white');
+                    navLogoText.classList.remove('text-gray-900');
+                }
+                navLinks.forEach(link => {
+                    link.classList.add('text-white', 'hover:text-gray-200');
+                    link.classList.remove('text-gray-700', 'hover:text-primary-600');
+                });
+                document.getElementById('mobile-menu-btn').classList.add('text-white');
+                document.getElementById('mobile-menu-btn').classList.remove('text-gray-900');
+            }
+        });
+
+        // モバイルメニューの開閉
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('mobile-menu-hidden')) {
+                mobileMenu.classList.remove('mobile-menu-hidden');
+                mobileMenu.classList.add('mobile-menu-visible');
+            } else {
+                mobileMenu.classList.add('mobile-menu-hidden');
+                mobileMenu.classList.remove('mobile-menu-visible');
+            }
+        });
+
+        // モバイルメニューのリンククリック時にメニューを閉じる
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('mobile-menu-hidden');
+                mobileMenu.classList.remove('mobile-menu-visible');
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Lucide Icons の初期化
+        lucide.createIcons();
+    </script>
+
 </body>
 </html>
