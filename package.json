@@ -1,0 +1,25 @@
+{
+  "name": "motortruck-procedures",
+  "version": "1.0.0",
+  "description": "一般貨物自動車運送事業 諸手続きサポートページ",
+  "type": "module",
+  "scripts": {
+    "search": "node dev-tools/unsplash-search.js"
+  },
+  "dependencies": {
+    "unsplash-js": "^7.0.19",
+    "dotenv": "^16.4.5"
+  },
+  "keywords": [
+    "webpage",
+    "template",
+    "claude-code",
+    "unsplash",
+    "tailwind"
+  ],
+  "author": "Claude Code",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
